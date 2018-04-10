@@ -1,5 +1,5 @@
 // Environment variabelen.
-var env = 
+var env =
 {
     webPort: process.env.PORT || 3000,
     dbHost: process.env.DB_HOST || 'localhost',
@@ -13,8 +13,8 @@ var dburl = process.env.NODE_ENV === 'production' ?
     'mongodb://' + env.dbUser + ':' + env.dbPassword + '@' + env.dbHost + ':' + env.dbPort + '/' + env.dbDatabase :
     'mongodb://localhost/' + env.dbDatabase
 
-module.exports = 
+module.exports =
 {
     env: env,
-    dburl: dburl
+    dburl: "mongodb://" + dbUser + ":" + dbPassword +":admin@ds139459.mlab.com:39459/spifyappdb"
 };

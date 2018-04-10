@@ -9,7 +9,7 @@ var app = express();
 
 // Routes.
 var userroutes = require('./api/user.routes');
-
+var playlistroutes = require('./api/playlist.routes');
 // BodyParser zorgt dat we de body uit een request kunnen gebruiken.
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
@@ -39,7 +39,7 @@ app.use(function (req, res, next)
 
 // Installeer de routes.
 app.use('/api/user', userroutes);
-
+app.use('/api/playlist', userroutes);
 
 // Wordt uitgevoerd wanneer err != null; anders door naar next().
 app.use(function (err, req, res, next)

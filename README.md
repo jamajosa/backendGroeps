@@ -26,13 +26,13 @@ Ophalen op ID.
 GET: http://localhost:3000/api/user/users/:id
 
 Nieuwe user toevoegen.
-POST: http://localhost:3000/api/v1/createuser
+POST: http://localhost:3000/api/user/createuser
 
 User verwijderen.
-DELETE: http://localhost:3000/api/v1/deleteuser/5a1be38516b0c512dcda4fe0
+DELETE: http://localhost:3000/api/user/deleteuser/5a1be38516b0c512dcda4fe0
 
 ## Gemaakt door
 - Jordy Huijgens
 - Joep Gruter
-"# backendGroeps" 
-"# backendGroeps" 
+"# backendGroeps"
+"# backendGroeps"

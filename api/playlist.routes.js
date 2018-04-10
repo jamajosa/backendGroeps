@@ -12,7 +12,7 @@ const Song = require('../model/song.model');
 //         .then((user) => res.status(200).send(user))
 //         .catch((error) => res.status(401).send(error));
 // });
-router.get('/helloworld', function(req, res) {
+routes.get('/helloworld', function(req, res) {
     res.render('helloworld', { title: 'Hello, World!' });
 });
 //playlists toevoegen

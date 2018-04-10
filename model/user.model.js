@@ -14,7 +14,7 @@ const UserSchema = new Schema({
 });
 const User = mongoose.model('user', UserSchema);
 //create a playlist
- User.find({name : "Jordy H"}, function (err, docs)
+ User.find({userName : "Jordy H"}, function (err, docs)
 {
     if (docs.length)
     {
@@ -22,7 +22,7 @@ const User = mongoose.model('user', UserSchema);
     else
     {
         const user = new User({
-            name: 'Jordy H',
+            userName: 'Jordy H',
         }).save();
     }
 });

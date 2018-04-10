@@ -48,6 +48,17 @@ PUT: http://localhost:3000/api/playlist/addPlaylist/:id
 Playlist verwijderen
 DELETE: http://localhost:3000/api/playlist/deletePlaylist/:id/:playListid
 ```
+### Playlists
+```
+Playlist ophalen van user
+GET: http://localhost:3000/api/playlist/playlists/:id
+
+Playlist plaatsen
+PUT: http://localhost:3000/api/playlist/addPlaylist/:id
+
+Playlist verwijderen
+DELETE: http://localhost:3000/api/playlist/deletePlaylist/:id/:playListid
+```
 ## Gemaakt door
 ```
 - Jordy Huijgens

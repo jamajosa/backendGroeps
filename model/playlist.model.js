@@ -9,8 +9,5 @@ const PlaylistSchema = new Schema({
     [{
         song: Song
     }]
-},
-{
-    timestamps: true
 });
 module.exports = PlaylistSchema;

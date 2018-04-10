@@ -20,7 +20,7 @@ routes.put('/addPlaylist/:id', function(req, res) {
     var id = req.params.id;
     User.findById(id)
         .then( user => {
-            user.userPlaylists.push(req.body.userPlaylist);
+            user.userPlaylists.push(req.body);
             user.save();
             res.status(200).json(user);
         })

@@ -13,17 +13,28 @@ routes.get('/playlists/:id', function(req, res)
         .catch((error) => res.status(401).send(error));
 });
 
-//playlists toevoegen of deleten
-routes.put('/addRemovePlaylist/:id', function(req, res) {
-  console.log("editUser check");
+//playlists toevoegen
+routes.put('/addPlaylist/:id', function(req, res) {
+  console.log("addPlaylist check");
     res.contentType('application/json');
     var id = req.params.id;
-    var update = {
-        "userPlaylists" : req.body.userPlaylist
-    };
     User.findById(id)
         .then( user => {
-            user.set(update);
+            user.userPlaylists.push(req.body.userPlaylist);
+            user.save();
+            res.status(200).json(user);
+        })
+        .catch((error) => res.status(401).json(error));
+});
+
+//playlists verwijderen
+routes.put('/RemovePlaylist/:id', function(req, res) {
+  console.log("RemovePlaylist check");
+    res.contentType('application/json');
+    var id = req.params.id;
+    User.findById(id)
+        .then( user => {
+            user.userPlaylists.delete(req.body.userPlaylist);
             user.save();
             res.status(200).json(user);
         })

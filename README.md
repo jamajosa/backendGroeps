@@ -42,9 +42,11 @@ PUT: http://localhost:3000/api/user/editUser/:id
 Playlist ophalen van user
 GET: http://localhost:3000/api/playlist/playlists/:id
 
-Playlist plaatsen of verwijderen (geef een array mee met al je playlists)
-PUT: http://localhost:3000/api/playlist/addRemovePlaylist/:id
+Playlist plaatsen
+PUT: http://localhost:3000/api/playlist/addPlaylist/:id
 
+Playlist verwijderen
+PUT: http://localhost:3000/api/playlist/RemovePlaylist/:id
 ```
 ## Gemaakt door
 ```

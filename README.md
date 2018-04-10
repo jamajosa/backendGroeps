@@ -1,4 +1,4 @@
-# Recepten Mongodb Server
+# Playlist Mongodb Server
 Nodejs server, biedt API op een Mongodb database met recept en ingredient informatie.
 Dit is dus alleen de back-end.
 

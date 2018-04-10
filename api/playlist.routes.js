@@ -5,13 +5,13 @@ const User = require('../model/user.model');
 const Song = require('../model/song.model');
 
 //playlists ophalen
-routes.get('/playlists/:id', function(req, res)
-{
-    console.log("/playlists/:id check");
-    User.findById({ _id: req.params.id })
-        .then((user.userPlaylists) => res.status(200).send(user.userPlaylists))
-        .catch((error) => res.status(401).send(error));
-});
+// routes.get('/playlists/:id', function(req, res)
+// {
+//     console.log("/playlists/:id check");
+//     User.findById({ _id: req.params.id })
+//         .then((user) => res.status(200).send(user))
+//         .catch((error) => res.status(401).send(error));
+// });
 
 //playlists toevoegen
 routes.put('/addPlaylist/:id', function(req, res) {
@@ -34,7 +34,7 @@ routes.delete('/deletePlaylist/:id/:playListid', function(req, res){
     const playlistId = req.params.eventid;
     User.findById(userId)
         .then((users) => {
-            users.playlist.remove(playlistId);
+            users.userPlaylists.remove(playlistId);
             users.save();
         })
         .then(() => res.status(200).json({

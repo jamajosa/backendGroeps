@@ -46,7 +46,7 @@ Playlist plaatsen
 PUT: http://localhost:3000/api/playlist/addPlaylist/:id
 
 Playlist verwijderen
-PUT: http://localhost:3000/api/playlist/RemovePlaylist/:id
+DELETE: http://localhost:3000/api/playlist/deletePlaylist/:id/:playListid
 ```
 ## Gemaakt door
 ```

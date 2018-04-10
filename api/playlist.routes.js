@@ -27,6 +27,25 @@ routes.put('/addPlaylist/:id', function(req, res) {
         .catch((error) => res.status(401).json(error));
 });
 
+//playlist verwijderen
+routes.delete('/deletePlaylist/:id/:playListid', function(req, res){
+    res.contentType('application/json');
+    const userId = req.params.id;
+    const playlistId = req.params.eventid;
+    User.findById(userId)
+        .then((users) => {
+            users.playlist.remove(playlistId);
+            users.save();
+        })
+        .then(() => res.status(200).json({
+            'status': 'Playlist removed.'
+        }))
+        .catch((error) => {
+        console.log(error);
+        res.status(400).json(error);
+        });
+});
+
 //playlists verwijderen
 routes.put('/RemovePlaylist/:id', function(req, res) {
   console.log("RemovePlaylist check");

@@ -39,7 +39,7 @@ app.use(function (req, res, next)
 
 // Installeer de routes.
 app.use('/api/user', userroutes);
-app.use('/api/playlist', userroutes);
+app.use('/api/playlist', playlistroutes);
 
 // Wordt uitgevoerd wanneer err != null; anders door naar next().
 app.use(function (err, req, res, next)

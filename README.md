@@ -34,5 +34,3 @@ DELETE: http://localhost:3000/api/user/deleteuser/5a1be38516b0c512dcda4fe0
 ## Gemaakt door
 - Jordy Huijgens
 - Joep Gruter
-"# backendGroeps"
-"# backendGroeps"

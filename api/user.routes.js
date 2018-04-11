@@ -13,11 +13,11 @@ routes.get('/users', function(req, res)
         .catch((error) => res.status(401).send(error));
 });
 
- // Specifiek user op _id opvragen.
- routes.get('/users/:id', function(req, res)
+ // Specifiek user op name opvragen.
+ routes.get('/user/:name', function(req, res)
 {
      console.log("users/:id check");
-     User.findById({ _id: req.params.id })
+     User.find({ userName: req.params.name })
          .then((user) => res.status(200).send(user))
          .catch((error) => res.status(401).send(error));
  });
